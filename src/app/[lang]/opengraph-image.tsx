@@ -1,16 +1,23 @@
 import { ImageResponse } from "next/og";
-import { content, type Lang } from "@/lib/content";
+import { content, langs, type Lang } from "@/lib/content";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "Mahmut Efe Türkol — Backend Developer | AI & LLM Integration";
+
+// Yalnızca tanımlı diller üretilir; geçersiz parametre 500 yerine 404 döner
+export const dynamicParams = false;
+export function generateStaticParams() {
+  return langs.map((lang) => ({ lang }));
+}
 
 export default async function OpengraphImage({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }) {
-  const lang = (await params).lang as Lang;
+  const raw = (await params).lang;
+  const lang: Lang = langs.includes(raw as Lang) ? (raw as Lang) : "tr";
   const tagline = content[lang].ogTagline;
 
   return new ImageResponse(
