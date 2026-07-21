@@ -1,22 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 64">
-  <!-- Birleşik MET ligatürü: M'nin sağ gövdesi E'nin omurgası,
-       E'nin üst çizgisi T'nin başlığı olur. Çerçevesiz, şeffaf zemin. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 64">
+  <!-- Birleşik MET ligatürü — çerçevesiz, şeffaf zemin.
+       M'nin sağ gövdesi E'nin omurgası; E'nin üst çizgisi T'nin başlığı olur. -->
   <g fill="#d4a853">
     <!-- M sol gövde -->
-    <rect x="2" y="12" width="7" height="46"/>
-    <!-- M ortası (V) -->
-    <polygon points="9,12 16,12 21.5,30 27,12 34,12 25,48 18,48"/>
+    <rect x="6" y="16" width="8" height="42"/>
+    <!-- M ortası: V (iki eğik kol, altta birleşir) -->
+    <polygon points="6,16 14,16 29,48 21,48"/>
+    <polygon points="36,16 44,16 29,48 21,48"/>
     <!-- M sağ gövde = E omurgası -->
-    <rect x="34" y="12" width="7" height="46"/>
-    <!-- E üst çizgi = T başlığı -->
-    <rect x="34" y="12" width="34" height="7"/>
-    <!-- E orta çizgi -->
-    <rect x="34" y="32" width="16" height="7"/>
-    <!-- E alt çizgi -->
-    <rect x="34" y="51" width="16" height="7"/>
+    <rect x="36" y="16" width="8" height="42"/>
+    <!-- E üst kolu = T başlığı -->
+    <rect x="36" y="16" width="34" height="8"/>
+    <!-- E orta kolu -->
+    <rect x="44" y="33" width="16" height="8"/>
+    <!-- E alt kolu -->
+    <rect x="44" y="50" width="18" height="8"/>
     <!-- T gövdesi -->
-    <rect x="58" y="12" width="7" height="34"/>
+    <rect x="62" y="16" width="8" height="34"/>
     <!-- köşe noktası -->
-    <rect x="65" y="2" width="6" height="6"/>
+    <rect x="73" y="6" width="7" height="7"/>
   </g>
 </svg>
