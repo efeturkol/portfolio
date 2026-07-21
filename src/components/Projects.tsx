@@ -25,6 +25,9 @@ const tagStyles: Record<string, string> = {
   "Random Forest": "border-green-400/30 bg-green-400/10 text-green-300",
   SHAP: "border-teal-400/30 bg-teal-400/10 text-teal-300",
   Expo: "border-neutral-400/30 bg-neutral-400/10 text-neutral-300",
+  "Next.js": "border-neutral-300/30 bg-neutral-300/10 text-neutral-100",
+  "Three.js": "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
+  GSAP: "border-green-400/30 bg-green-400/10 text-green-300",
 };
 
 function ProjectPanel({

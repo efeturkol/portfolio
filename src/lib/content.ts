@@ -132,7 +132,7 @@ export const content: Record<Lang, SiteContent> = {
       scroll: "Kaydır",
     },
     stats: [
-      { value: 5, label: "Proje" },
+      { value: 6, label: "Proje" },
       { value: 15, label: "Teknoloji" },
       { value: 10, label: "GitHub Repo", lang: "en" },
     ],
@@ -231,6 +231,15 @@ export const content: Record<Lang, SiteContent> = {
           github: "https://github.com/efeturkol/farmaiq",
           status: "Tamamlandı",
         },
+        {
+          index: "06",
+          title: "Portfolyo",
+          description:
+            "Üzerinde bulunduğunuz bu site. Next.js ile geliştirilmiş; iki dilli (TR/EN), Three.js parçacık arka planı ve GSAP animasyonları içeren kişisel portfolyo. SEO, güvenlik başlıkları ve erişilebilirlik gözetilerek Vercel'de yayınlandı.",
+          tags: ["Next.js", "TypeScript", "Three.js", "GSAP"],
+          github: "https://github.com/efeturkol/portfolio",
+          status: "Yayında",
+        },
       ],
     },
     skills: {
@@ -308,7 +317,7 @@ export const content: Record<Lang, SiteContent> = {
       scroll: "Scroll",
     },
     stats: [
-      { value: 5, label: "Projects" },
+      { value: 6, label: "Projects" },
       { value: 15, label: "Technologies" },
       { value: 10, label: "GitHub Repos" },
     ],
@@ -407,6 +416,15 @@ export const content: Record<Lang, SiteContent> = {
           tags: ["Python", "BERTurk", "NLP", "Fine-tuning"],
           github: "https://github.com/efeturkol/farmaiq",
           status: "Completed",
+        },
+        {
+          index: "06",
+          title: "Portfolio",
+          description:
+            "The site you're currently on. A personal portfolio built with Next.js — bilingual (TR/EN), featuring a Three.js particle background and GSAP animations. Deployed on Vercel with SEO, security headers, and accessibility in mind.",
+          tags: ["Next.js", "TypeScript", "Three.js", "GSAP"],
+          github: "https://github.com/efeturkol/portfolio",
+          status: "Live",
         },
       ],
     },
