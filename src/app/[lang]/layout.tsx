@@ -41,6 +41,9 @@ export async function generateMetadata({
     title: meta.title,
     description: meta.description,
     keywords: meta.keywords,
+    verification: {
+      google: "rN1FGTrEVQo6Ukzco_qgY4QJL7xx_W06LdANnathmuA",
+    },
     alternates: {
       canonical: path,
       languages: { tr: "/", en: "/en" },
