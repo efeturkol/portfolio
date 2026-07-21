@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 64">
+  <!-- Birleşik MET ligatürü: M'nin sağ gövdesi E'nin omurgası,
+       E'nin üst çizgisi T'nin başlığı olur. Çerçevesiz, şeffaf zemin. -->
+  <g fill="#d4a853">
+    <!-- M sol gövde -->
+    <rect x="2" y="12" width="7" height="46"/>
+    <!-- M ortası (V) -->
+    <polygon points="9,12 16,12 21.5,30 27,12 34,12 25,48 18,48"/>
+    <!-- M sağ gövde = E omurgası -->
+    <rect x="34" y="12" width="7" height="46"/>
+    <!-- E üst çizgi = T başlığı -->
+    <rect x="34" y="12" width="34" height="7"/>
+    <!-- E orta çizgi -->
+    <rect x="34" y="32" width="16" height="7"/>
+    <!-- E alt çizgi -->
+    <rect x="34" y="51" width="16" height="7"/>
+    <!-- T gövdesi -->
+    <rect x="58" y="12" width="7" height="34"/>
+    <!-- köşe noktası -->
+    <rect x="65" y="2" width="6" height="6"/>
+  </g>
+</svg>
