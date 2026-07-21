@@ -1,23 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82 64">
-  <!-- Birleşik MET ligatürü — çerçevesiz, şeffaf zemin.
-       M'nin sağ gövdesi E'nin omurgası; E'nin üst çizgisi T'nin başlığı olur. -->
-  <g fill="#d4a853">
-    <!-- M sol gövde -->
-    <rect x="6" y="16" width="8" height="42"/>
-    <!-- M ortası: V (iki eğik kol, altta birleşir) -->
-    <polygon points="6,16 14,16 29,48 21,48"/>
-    <polygon points="36,16 44,16 29,48 21,48"/>
-    <!-- M sağ gövde = E omurgası -->
-    <rect x="36" y="16" width="8" height="42"/>
-    <!-- E üst kolu = T başlığı -->
-    <rect x="36" y="16" width="34" height="8"/>
-    <!-- E orta kolu -->
-    <rect x="44" y="33" width="16" height="8"/>
-    <!-- E alt kolu -->
-    <rect x="44" y="50" width="18" height="8"/>
-    <!-- T gövdesi -->
-    <rect x="62" y="16" width="8" height="34"/>
-    <!-- köşe noktası -->
-    <rect x="73" y="6" width="7" height="7"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0a0a0a"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#d4a853" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="32" y="38" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="19" font-weight="700" fill="#d4a853" text-anchor="middle" letter-spacing="1">MET</text>
+  <line x1="20" y1="47" x2="44" y2="47" stroke="#d4a853" stroke-width="2.5" stroke-linecap="round"/>
 </svg>
