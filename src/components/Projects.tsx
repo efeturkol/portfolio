@@ -50,7 +50,7 @@ function ProjectPanel({
 
       <h3
         lang={project.titleLang}
-        className="mt-8 text-[clamp(2rem,6vw,5rem)] font-bold uppercase leading-[1.08] tracking-tight text-white"
+        className="mt-6 text-[clamp(1.8rem,5vw,4rem)] font-bold uppercase leading-[1.08] tracking-tight text-white"
       >
         {project.demo ? (
           <a
@@ -66,7 +66,19 @@ function ProjectPanel({
         )}
       </h3>
 
-      <p className="mt-8 max-w-md leading-relaxed text-neutral-400">
+      {project.image && (
+        <div className="mt-6 w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={project.image}
+            alt={`${project.title} önizleme`}
+            loading="lazy"
+            className="block w-full"
+          />
+        </div>
+      )}
+
+      <p className="mt-6 max-w-md leading-relaxed text-neutral-400">
         {project.description}
       </p>
 

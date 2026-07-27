@@ -9,6 +9,7 @@ export type ProjectItem = {
   titleLang?: string;
   description: string;
   tags: string[];
+  image?: string;
   demo?: string;
   demoLabel?: string;
   github?: string;
@@ -147,7 +148,7 @@ export const content: Record<Lang, SiteContent> = {
       label: "02 — Deneyim",
       entries: [
         {
-          year: "Temmuz 2026 — Devam",
+          year: "Temmuz 2026 — Devam ediyor",
           title: "Yeşilyurt Belediyesi — Yazılım Stajyeri",
           description:
             "Malatya Yeşilyurt Belediyesi Bilgi İşlem Müdürlüğü'nde yazılım stajyeri olarak yer alıyorum.",
@@ -159,19 +160,19 @@ export const content: Record<Lang, SiteContent> = {
             "Phi-3.5 Mini, Foundry Local ve PostgreSQL kullanarak BDDK dokümanları için RAG asistanı geliştirdim; doküman parçalama, embedding, retrieval ve yanıt üretme süreçlerini uçtan uca uyguladım.",
         },
         {
-          year: "2025 — 2026",
+          year: "Temmuz 2025 — Nisan 2026",
           title: "IEEE İnönü — Co-Lead & Denetleme Kurulu Başkanı",
           description:
             "Teknik etkinlik planlaması ve ekip koordinasyonunu yönettim; üye gelişim süreçlerinden sorumlu oldum.",
         },
         {
-          year: "2024 — 2025",
+          year: "Ağustos 2024 — Temmuz 2025",
           title: "Google Developers Student Club — Co-Lead",
           description:
             "Workshop ve hackathon etkinliklerinin planlanmasına ve yürütülmesine katkı sağladım; proje gruplarının oluşturulması ve koordinasyonunda görev aldım.",
         },
         {
-          year: "2023 — 2024",
+          year: "Ağustos 2023 — Ağustos 2024",
           title: "Google Developers Student Club — Core Team Member",
           description:
             "Etkinlik organizasyonunda ve teknik içerik üretiminde görev aldım.",
@@ -196,10 +197,10 @@ export const content: Record<Lang, SiteContent> = {
           index: "01",
           title: "BDDK RAG Sistemi",
           description:
-            "Bankacılık ve fintech sektörüne yönelik, BDDK düzenleyici uyum dokümanlarını temel alan RAG sistemi. Microsoft Bulut Yaz Okulu stajı kapsamında geliştirildi; çalışmalar sürüyor.",
-          tags: ["RAG", "LLM", "Azure", "PostgreSQL"],
+            "Microsoft Bulut Yaz Okulu 2026 kapsamında Microsoft Foundry Local ile geliştirilen, çevrimdışı çalışan BDDK & KVKK düzenleyici uyum soru-cevap asistanı. Yerel LLM çıkarımıyla RAG mimarisi ve 15 Türk bankacılık düzenlemesi üzerinde semantik arama; FastAPI + React ile geliştirildi.",
+          tags: ["RAG", "LLM", "FastAPI", "React"],
           github: "https://github.com/efeturkol/bddk-rag-assistant",
-          status: "Devam Ediyor",
+          status: "Tamamlandı",
         },
         {
           index: "02",
@@ -215,6 +216,7 @@ export const content: Record<Lang, SiteContent> = {
           description:
             "Namaz vakitleri, dualar, Kur'an ve tesbih özelliklerini bir araya getiren iOS uygulaması. App Store'da yayında; reklam destekli ücretsiz model, premium altyapı etkinleştirilmeye hazır.",
           tags: ["React Native", "Expo", "TypeScript"],
+          image: "/projects/insirah.png",
           demo: "https://apps.apple.com/app/id6790176500",
           demoLabel: "App Store",
           status: "App Store'da Yayında",
@@ -225,6 +227,7 @@ export const content: Record<Lang, SiteContent> = {
           description:
             "Kullanıcıya özel rota planlama ve interaktif harita entegrasyonu içeren kişiselleştirilmiş Türkiye seyahat planlayıcısı. Web sürümü tamamlandı; mobil uygulama olarak geliştirilmesi sürüyor.",
           tags: ["React", "TypeScript", "Supabase", "Leaflet"],
+          image: "/projects/gezio.png",
           demo: "https://gezio-delta.vercel.app",
           status: "Yayında",
         },
@@ -350,19 +353,19 @@ export const content: Record<Lang, SiteContent> = {
             "Built a RAG assistant for BDDK compliance documents using Phi-3.5 Mini, Foundry Local, and PostgreSQL; implemented the full pipeline end-to-end: document chunking, embedding, retrieval, and response generation.",
         },
         {
-          year: "2025 — 2026",
+          year: "July 2025 — April 2026",
           title: "IEEE İnönü — Co-Lead & Supervisory Board Chair",
           description:
             "Led technical event planning and internal team coordination; owned member development processes.",
         },
         {
-          year: "2024 — 2025",
+          year: "August 2024 — July 2025",
           title: "Google Developers Student Club — Co-Lead",
           description:
             "Contributed to the planning and execution of workshops and hackathons; took part in forming and coordinating project groups.",
         },
         {
-          year: "2023 — 2024",
+          year: "August 2023 — August 2024",
           title: "Google Developers Student Club — Core Team Member",
           description:
             "Took part in event organization and technical content creation.",
@@ -387,10 +390,10 @@ export const content: Record<Lang, SiteContent> = {
           index: "01",
           title: "BDDK RAG System",
           description:
-            "A RAG system built on BDDK (Turkish banking regulator) compliance documents for banking and fintech use cases. Developed during the Microsoft Cloud Summer School internship; work is still ongoing.",
-          tags: ["RAG", "LLM", "Azure", "PostgreSQL"],
+            "Offline BDDK & KVKK regulatory Q&A assistant built with Microsoft Foundry Local during Microsoft Cloud Summer School 2026 — a RAG pipeline with local LLM inference and semantic search over 15 Turkish banking regulations, built with FastAPI + React.",
+          tags: ["RAG", "LLM", "FastAPI", "React"],
           github: "https://github.com/efeturkol/bddk-rag-assistant",
-          status: "In Progress",
+          status: "Completed",
         },
         {
           index: "02",
@@ -407,6 +410,7 @@ export const content: Record<Lang, SiteContent> = {
           description:
             "An iOS app bringing together prayer times, supplications, Quran, and a dhikr counter. Published on the App Store; free with an ad-supported model and a premium system ready to be enabled.",
           tags: ["React Native", "Expo", "TypeScript"],
+          image: "/projects/insirah.png",
           demo: "https://apps.apple.com/app/id6790176500",
           demoLabel: "App Store",
           status: "Live on the App Store",
@@ -417,6 +421,7 @@ export const content: Record<Lang, SiteContent> = {
           description:
             "A personalized Turkey travel planner featuring custom route planning and interactive map integration. The web version is complete; a mobile version is in development.",
           tags: ["React", "TypeScript", "Supabase", "Leaflet"],
+          image: "/projects/gezio.png",
           demo: "https://gezio-delta.vercel.app",
           status: "Live",
         },
