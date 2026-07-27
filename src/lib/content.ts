@@ -147,21 +147,16 @@ export const content: Record<Lang, SiteContent> = {
       label: "02 — Deneyim",
       entries: [
         {
-          year: "2023",
-          title: "İnönü Üniversitesi",
-          description: "Bilgisayar Mühendisliği eğitimine başladım.",
+          year: "Temmuz 2026 — Devam",
+          title: "Yeşilyurt Belediyesi — Yazılım Stajyeri",
+          description:
+            "Malatya Yeşilyurt Belediyesi Bilgi İşlem Müdürlüğü'nde yazılım stajyeri olarak yer alıyorum.",
         },
         {
-          year: "2023 — 2024",
-          title: "Google Developers Student Club — Core Team Member",
+          year: "Haziran — Temmuz 2026",
+          title: "Microsoft Bulut Yaz Okulu — Yazılım & AI Stajyeri",
           description:
-            "Etkinlik organizasyonunda ve teknik içerik üretiminde görev aldım.",
-        },
-        {
-          year: "2024 — 2025",
-          title: "Google Developers Student Club — Co-Lead",
-          description:
-            "Workshop ve hackathon etkinliklerinin planlanmasına ve yürütülmesine katkı sağladım; proje gruplarının oluşturulması ve koordinasyonunda görev aldım.",
+            "Phi-3.5 Mini, Foundry Local ve PostgreSQL kullanarak BDDK dokümanları için RAG asistanı geliştirdim; doküman parçalama, embedding, retrieval ve yanıt üretme süreçlerini uçtan uca uyguladım.",
         },
         {
           year: "2025 — 2026",
@@ -170,10 +165,21 @@ export const content: Record<Lang, SiteContent> = {
             "Teknik etkinlik planlaması ve ekip koordinasyonunu yönettim; üye gelişim süreçlerinden sorumlu oldum.",
         },
         {
-          year: "2026",
-          title: "Microsoft Bulut Yaz Okulu — Yazılım & AI Stajyeri",
+          year: "2024 — 2025",
+          title: "Google Developers Student Club — Co-Lead",
           description:
-            "Phi-3.5 Mini, Foundry Local ve PostgreSQL kullanarak BDDK dokümanları için RAG asistanı geliştirdim; doküman parçalama, embedding, retrieval ve yanıt üretme süreçlerini uçtan uca uyguladım.",
+            "Workshop ve hackathon etkinliklerinin planlanmasına ve yürütülmesine katkı sağladım; proje gruplarının oluşturulması ve koordinasyonunda görev aldım.",
+        },
+        {
+          year: "2023 — 2024",
+          title: "Google Developers Student Club — Core Team Member",
+          description:
+            "Etkinlik organizasyonunda ve teknik içerik üretiminde görev aldım.",
+        },
+        {
+          year: "2023",
+          title: "İnönü Üniversitesi",
+          description: "Bilgisayar Mühendisliği eğitimine başladım.",
         },
       ],
     },
@@ -332,21 +338,16 @@ export const content: Record<Lang, SiteContent> = {
       label: "02 — Experience",
       entries: [
         {
-          year: "2023",
-          title: "İnönü University",
-          description: "Started my Computer Engineering degree.",
+          year: "July 2026 — Present",
+          title: "Yeşilyurt Municipality — Software Intern",
+          description:
+            "Working as a software intern in the IT Department of Yeşilyurt Municipality (Malatya).",
         },
         {
-          year: "2023 — 2024",
-          title: "Google Developers Student Club — Core Team Member",
+          year: "June — July 2026",
+          title: "Microsoft Cloud Summer School — Software & AI Intern",
           description:
-            "Took part in event organization and technical content creation.",
-        },
-        {
-          year: "2024 — 2025",
-          title: "Google Developers Student Club — Co-Lead",
-          description:
-            "Contributed to the planning and execution of workshops and hackathons; took part in forming and coordinating project groups.",
+            "Built a RAG assistant for BDDK compliance documents using Phi-3.5 Mini, Foundry Local, and PostgreSQL; implemented the full pipeline end-to-end: document chunking, embedding, retrieval, and response generation.",
         },
         {
           year: "2025 — 2026",
@@ -355,10 +356,21 @@ export const content: Record<Lang, SiteContent> = {
             "Led technical event planning and internal team coordination; owned member development processes.",
         },
         {
-          year: "2026",
-          title: "Microsoft Cloud Summer School — Software & AI Intern",
+          year: "2024 — 2025",
+          title: "Google Developers Student Club — Co-Lead",
           description:
-            "Built a RAG assistant for BDDK compliance documents using Phi-3.5 Mini, Foundry Local, and PostgreSQL; implemented the full pipeline end-to-end: document chunking, embedding, retrieval, and response generation.",
+            "Contributed to the planning and execution of workshops and hackathons; took part in forming and coordinating project groups.",
+        },
+        {
+          year: "2023 — 2024",
+          title: "Google Developers Student Club — Core Team Member",
+          description:
+            "Took part in event organization and technical content creation.",
+        },
+        {
+          year: "2023",
+          title: "İnönü University",
+          description: "Started my Computer Engineering degree.",
         },
       ],
     },

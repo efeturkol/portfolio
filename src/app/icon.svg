@@ -1,6 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0a0a0a"/>
-  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#d4a853" stroke-opacity="0.4" stroke-width="2"/>
-  <text x="32" y="38" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="19" font-weight="700" fill="#d4a853" text-anchor="middle" letter-spacing="1">MET</text>
-  <line x1="20" y1="47" x2="44" y2="47" stroke="#d4a853" stroke-width="2.5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="26" fill="#f4f2ec"/>
+  <g fill="none" stroke="#1c1c1c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- M -->
+    <polyline points="24,78 24,44 37,63 50,44 50,78"/>
+    <!-- E: üç çubuk (orta altın ayrı çizilir) -->
+    <line x1="58" y1="45" x2="74" y2="45"/>
+    <line x1="58" y1="78" x2="74" y2="78"/>
+    <!-- T -->
+    <line x1="80" y1="45" x2="102" y2="45"/>
+    <line x1="91" y1="45" x2="91" y2="78"/>
+  </g>
+  <!-- E orta çubuk: altın -->
+  <line x1="58" y1="61.5" x2="74" y2="61.5" stroke="#d4a853" stroke-width="7" stroke-linecap="round"/>
+  <!-- T noktası: altın -->
+  <circle cx="104" cy="41" r="4" fill="#d4a853"/>
 </svg>
