@@ -198,7 +198,7 @@ export const content: Record<Lang, SiteContent> = {
           title: "BDDK RAG Sistemi",
           description:
             "Microsoft Bulut Yaz Okulu 2026 kapsamında Microsoft Foundry Local ile geliştirilen, çevrimdışı çalışan BDDK & KVKK düzenleyici uyum soru-cevap asistanı. Yerel LLM çıkarımıyla RAG mimarisi ve 15 Türk bankacılık düzenlemesi üzerinde semantik arama; FastAPI + React ile geliştirildi.",
-          tags: ["RAG", "LLM", "FastAPI", "React"],
+          tags: ["Python", "RAG", "LLM", "FastAPI", "React"],
           github: "https://github.com/efeturkol/bddk-rag-assistant",
           status: "Tamamlandı",
         },
@@ -391,7 +391,7 @@ export const content: Record<Lang, SiteContent> = {
           title: "BDDK RAG System",
           description:
             "Offline BDDK & KVKK regulatory Q&A assistant built with Microsoft Foundry Local during Microsoft Cloud Summer School 2026 — a RAG pipeline with local LLM inference and semantic search over 15 Turkish banking regulations, built with FastAPI + React.",
-          tags: ["RAG", "LLM", "FastAPI", "React"],
+          tags: ["Python", "RAG", "LLM", "FastAPI", "React"],
           github: "https://github.com/efeturkol/bddk-rag-assistant",
           status: "Completed",
         },

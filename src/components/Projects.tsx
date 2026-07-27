@@ -39,63 +39,75 @@ function ProjectPanel({
   demoDefault: string;
   closedLabel: string;
 }) {
+  const hasImage = Boolean(project.image);
+
+  const media = project.image ? (
+    <div className="overflow-hidden rounded-2xl border border-white/10">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={project.image}
+        alt={`${project.title} önizleme`}
+        loading="lazy"
+        className="block w-full"
+      />
+    </div>
+  ) : null;
+
   return (
-    <article className="project-panel flex w-full shrink-0 flex-col justify-center border-t border-white/10 px-6 py-12 sm:px-14 md:h-full md:w-[58vw] md:border-l md:border-t-0 md:py-0">
-      <div className="flex items-baseline justify-between">
-        <span className="font-mono text-sm text-gold">{project.index}</span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500">
-          {project.status}
-        </span>
-      </div>
+    <article
+      className={`project-panel flex w-full shrink-0 flex-col justify-center border-t border-white/10 px-6 py-12 sm:px-14 md:h-full md:border-l md:border-t-0 md:py-0 ${
+        hasImage ? "md:w-[74vw]" : "md:w-[58vw]"
+      }`}
+    >
+      <div className={hasImage ? "md:flex md:items-center md:gap-12 lg:gap-16" : ""}>
+        {/* Metin sütunu */}
+        <div className={hasImage ? "md:flex-1" : ""}>
+          <div className="flex items-baseline justify-between">
+            <span className="font-mono text-sm text-gold">{project.index}</span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-neutral-500">
+              {project.status}
+            </span>
+          </div>
 
-      <h3
-        lang={project.titleLang}
-        className="mt-6 text-[clamp(1.8rem,5vw,4rem)] font-bold uppercase leading-[1.08] tracking-tight text-white"
-      >
-        {project.demo ? (
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors duration-300 hover:text-gold"
+          <h3
+            lang={project.titleLang}
+            className="mt-6 text-[clamp(1.8rem,5vw,4rem)] font-bold uppercase leading-[1.08] tracking-tight text-white"
           >
-            {project.title} <span aria-hidden>↗</span>
-          </a>
-        ) : (
-          project.title
-        )}
-      </h3>
+            {project.demo ? (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-300 hover:text-gold"
+              >
+                {project.title} <span aria-hidden>↗</span>
+              </a>
+            ) : (
+              project.title
+            )}
+          </h3>
 
-      {project.image && (
-        <div className="mt-6 w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={project.image}
-            alt={`${project.title} önizleme`}
-            loading="lazy"
-            className="block w-full"
-          />
-        </div>
-      )}
+          {/* Görsel mobilde başlığın altında görünür */}
+          {media && <div className="mt-6 md:hidden">{media}</div>}
 
-      <p className="mt-6 max-w-md leading-relaxed text-neutral-400">
-        {project.description}
-      </p>
+          <p className="mt-6 max-w-md leading-relaxed text-neutral-400">
+            {project.description}
+          </p>
 
-      <div lang="en" className="mt-8 flex max-w-md flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className={`rounded-full border px-3 py-1 font-mono text-[11px] ${
-              tagStyles[tag] ?? "border-white/15 bg-white/5 text-neutral-300"
-            }`}
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
+          <div lang="en" className="mt-8 flex max-w-md flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className={`rounded-full border px-3 py-1 font-mono text-[11px] ${
+                  tagStyles[tag] ?? "border-white/15 bg-white/5 text-neutral-300"
+                }`}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
 
-      <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-9 flex flex-wrap items-center gap-4">
         {project.demo && (
           <a
             href={project.demo}
@@ -121,11 +133,16 @@ function ProjectPanel({
             GitHub
           </a>
         )}
-        {!project.demo && !project.github && (
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-neutral-600">
-            {closedLabel}
-          </span>
-        )}
+            {!project.demo && !project.github && (
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-neutral-600">
+                {closedLabel}
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* Görsel sütunu — yalnızca masaüstünde, metnin yanında */}
+        {media && <div className="hidden md:block md:flex-1">{media}</div>}
       </div>
     </article>
   );
