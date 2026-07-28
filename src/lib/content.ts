@@ -5,7 +5,6 @@ export const langs: Lang[] = ["tr", "en"];
 export type ProjectItem = {
   index: string;
   title: string;
-  // titleLang: başlık farklı dildeyse CSS uppercase doğru kuralı uygulasın (ör. İnşirah)
   titleLang?: string;
   description: string;
   tags: string[];
@@ -46,7 +45,6 @@ type SiteContent = {
     contactHref: string;
     scroll: string;
   };
-  // lang: CSS uppercase'in yanlış locale kuralı uygulamaması için (ör. GitHub → GİTHUB)
   stats: { value: number; label: string; lang?: string }[];
   about: {
     id: string;
@@ -90,7 +88,7 @@ export const content: Record<Lang, SiteContent> = {
     meta: {
       title: "Mahmut Efe Türkol — Backend Developer | AI & LLM",
       description:
-        "İnönü Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisi. Backend geliştirme ve AI/LLM sistemleri (RAG, prompt engineering) üzerine çalışıyorum.",
+        "İnönü Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Backend geliştirme ve AI/LLM sistemleri üzerine çalışıyorum.",
       keywords: [
         "Mahmut Efe Türkol",
         "Backend Developer",
@@ -141,7 +139,7 @@ export const content: Record<Lang, SiteContent> = {
       id: "hakkimda",
       label: "01 — Hakkımda",
       lines: ["Backend geliştirme ve", "AI/LLM sistemleri üzerine", "çalışıyorum."],
-      body: "İnönü Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Backend geliştirme ve AI/LLM sistemleri (RAG, prompt engineering) üzerine çalışıyorum. IEEE ve Google DSC topluluklarında liderlik deneyimi kazandım.",
+      body: "İnönü Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Backend geliştirme ve AI/LLM sistemleri üzerine çalışıyorum. Üniversite boyunca IEEE ve Google Developer Student Clubs topluluklarının yönetiminde aktif olarak rol aldım, bu süreçte liderlik deneyimi kazandım. Kurumsal yazılım geliştirme ve bulut teknolojileri alanında kendimi sürekli geliştirmeye devam ediyor, yeni teknolojilere açık bir şekilde ilerliyorum. ",
     },
     timeline: {
       id: "deneyim",
