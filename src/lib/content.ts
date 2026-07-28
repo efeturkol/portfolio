@@ -151,7 +151,7 @@ export const content: Record<Lang, SiteContent> = {
           year: "Temmuz 2026 — Devam ediyor",
           title: "Yeşilyurt Belediyesi — Yazılım Stajyeri",
           description:
-            "Malatya Yeşilyurt Belediyesi Bilgi İşlem Müdürlüğü'nde yazılım stajyeri olarak yer alıyorum.",
+            "Malatya Yeşilyurt Belediyesi Bilgi İşlem Müdürlüğü'nde yazılım stajyeri olarak yer alıyorum. Backend geliştirme ve sistem entegrasyonu üzerine çalışıyorum.",
         },
         {
           year: "Haziran — Temmuz 2026",
@@ -197,7 +197,7 @@ export const content: Record<Lang, SiteContent> = {
           index: "01",
           title: "BDDK RAG Sistemi",
           description:
-            "Microsoft Bulut Yaz Okulu 2026 kapsamında Microsoft Foundry Local ile geliştirilen, çevrimdışı çalışan BDDK & KVKK düzenleyici uyum soru-cevap asistanı. Yerel LLM çıkarımıyla RAG mimarisi ve 15 Türk bankacılık düzenlemesi üzerinde semantik arama; FastAPI + React ile geliştirildi.",
+            "Microsoft Bulut Yaz Okulu 2026 kapsamında Microsoft Foundry Local ile geliştirilen, çevrimdışı çalışan BDDK & KVKK düzenleyici uyum soru-cevap asistanı. Yerel LLM çıkarımıyla RAG mimarisi ve Türk bankacılık düzenlemesi üzerinde semantik arama; FastAPI + React ile geliştirildi.",
           tags: ["Python", "RAG", "LLM", "FastAPI", "React"],
           github: "https://github.com/efeturkol/bddk-rag-assistant",
           status: "Tamamlandı",
@@ -214,7 +214,7 @@ export const content: Record<Lang, SiteContent> = {
           index: "03",
           title: "İnşirah",
           description:
-            "Namaz vakitleri, dualar, Kur'an ve tesbih özelliklerini bir araya getiren iOS uygulaması. App Store'da yayında; reklam destekli ücretsiz model, premium altyapı etkinleştirilmeye hazır.",
+            "Namaz vakitleri, dualar, Kur'an ve tesbih özelliklerini bir araya getiren iOS uygulaması. App Store'da yayında; reklam destekli ve tamamen ücretsiz.",
           tags: ["React Native", "Expo", "TypeScript"],
           image: "/projects/insirah.png",
           demo: "https://apps.apple.com/app/id6790176500",
