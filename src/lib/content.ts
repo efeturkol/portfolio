@@ -281,7 +281,7 @@ export const content: Record<Lang, SiteContent> = {
     meta: {
       title: "Mahmut Efe Türkol — Backend Developer | AI & LLM",
       description:
-        "4th-year Computer Engineering student at İnönü University. Working on backend development and AI/LLM systems (RAG, prompt engineering).",
+        "4th-year Computer Engineering student at İnönü University. Working on backend development and AI/LLM systems.",
       keywords: [
         "Mahmut Efe Türkol",
         "Backend Developer",
@@ -332,7 +332,7 @@ export const content: Record<Lang, SiteContent> = {
       id: "about",
       label: "01 — About",
       lines: ["I work on backend", "development and", "AI/LLM systems."],
-      body: "I'm a 4th-year Computer Engineering student at İnönü University, working at the intersection of backend development and AI/LLM systems (RAG, prompt engineering). I gained leadership experience within the IEEE and Google DSC communities.",
+      body: "I'm a 4th-year Computer Engineering student at İnönü University, working on backend development and AI/LLM systems. Throughout university, I took an active role in leading the IEEE and Google Developer Student Clubs communities, gaining hands-on leadership experience along the way. I keep growing in enterprise software development and cloud technologies, staying open to new tools and technologies.",
     },
     timeline: {
       id: "experience",
@@ -342,7 +342,7 @@ export const content: Record<Lang, SiteContent> = {
           year: "July 2026 — Present",
           title: "Yeşilyurt Municipality — Software Intern",
           description:
-            "Working as a software intern in the IT Department of Yeşilyurt Municipality (Malatya).",
+            "Working as a software intern in the IT Department of Yeşilyurt Municipality (Malatya). Focusing on backend development and system integration.",
         },
         {
           year: "June — July 2026",
@@ -388,7 +388,7 @@ export const content: Record<Lang, SiteContent> = {
           index: "01",
           title: "BDDK RAG System",
           description:
-            "Offline BDDK & KVKK regulatory Q&A assistant built with Microsoft Foundry Local during Microsoft Cloud Summer School 2026 — a RAG pipeline with local LLM inference and semantic search over 15 Turkish banking regulations, built with FastAPI + React.",
+            "Offline BDDK & KVKK regulatory Q&A assistant built with Microsoft Foundry Local during Microsoft Cloud Summer School 2026 — a RAG pipeline with local LLM inference and semantic search over Turkish banking regulations, built with FastAPI + React.",
           tags: ["Python", "RAG", "LLM", "FastAPI", "React"],
           github: "https://github.com/efeturkol/bddk-rag-assistant",
           status: "Completed",
@@ -406,7 +406,7 @@ export const content: Record<Lang, SiteContent> = {
           title: "İnşirah",
           titleLang: "tr",
           description:
-            "An iOS app bringing together prayer times, supplications, Quran, and a dhikr counter. Published on the App Store; free with an ad-supported model and a premium system ready to be enabled.",
+            "An iOS app bringing together prayer times, supplications, Quran, and a dhikr counter. Published on the App Store; ad-supported and completely free.",
           tags: ["React Native", "Expo", "TypeScript"],
           image: "/projects/insirah.png",
           demo: "https://apps.apple.com/app/id6790176500",
