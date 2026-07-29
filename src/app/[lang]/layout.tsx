@@ -68,7 +68,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Mahmut Efe Türkol",
-  jobTitle: "Backend Developer",
+  jobTitle: "Jr. Backend Developer",
   url: siteUrl,
   email: "mailto:mahmutefeturkol@hotmail.com",
   alumniOf: {

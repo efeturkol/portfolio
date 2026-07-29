@@ -3,7 +3,7 @@ import { content, langs, type Lang } from "@/lib/content";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Mahmut Efe Türkol — Backend Developer | AI & LLM Integration";
+export const alt = "Mahmut Efe Türkol — Jr. Backend Developer | AI & LLM Integration";
 
 // Yalnızca tanımlı diller üretilir; geçersiz parametre 500 yerine 404 döner
 export const dynamicParams = false;
@@ -56,7 +56,7 @@ export default async function OpengraphImage({
               color: "#d4a853",
             }}
           >
-            BACKEND DEVELOPER · AI &amp; LLM
+            JR. BACKEND DEVELOPER · AI &amp; LLM
           </div>
         </div>
         <div style={{ fontSize: "96px", fontWeight: 700, lineHeight: 1.1 }}>

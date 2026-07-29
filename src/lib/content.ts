@@ -86,7 +86,7 @@ type SiteContent = {
 export const content: Record<Lang, SiteContent> = {
   tr: {
     meta: {
-      title: "Mahmut Efe Türkol — Backend Developer | AI & LLM",
+      title: "Mahmut Efe Türkol — Jr. Backend Developer | AI & LLM Integration",
       description:
         "İnönü Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Backend geliştirme ve AI/LLM sistemleri üzerine çalışıyorum.",
       keywords: [
@@ -120,7 +120,7 @@ export const content: Record<Lang, SiteContent> = {
     hero: {
       id: "ana-sayfa",
       status: "Staj & İş Tekliflerine Açığım",
-      role: "Backend Developer · AI & LLM Integration",
+      role: "Jr. Backend Developer · AI & LLM Integration",
       bio: "İnönü Üniversitesi Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Backend geliştirme ve AI/LLM sistemleri üzerine çalışıyorum.",
       cvHref: "/cv.pdf",
       cvLabel: "CV İndir",
@@ -280,7 +280,7 @@ export const content: Record<Lang, SiteContent> = {
   },
   en: {
     meta: {
-      title: "Mahmut Efe Türkol — Backend Developer | AI & LLM",
+      title: "Mahmut Efe Türkol — Jr. Backend Developer | AI & LLM Integration",
       description:
         "4th-year Computer Engineering student at İnönü University. Working on backend development and AI/LLM systems.",
       keywords: [
@@ -314,7 +314,7 @@ export const content: Record<Lang, SiteContent> = {
     hero: {
       id: "home",
       status: "Open to Internship & Job Offers",
-      role: "Backend Developer · AI & LLM Integration",
+      role: "Jr. Backend Developer · AI & LLM Integration",
       bio: "4th-year Computer Engineering student at İnönü University. I work on backend development and AI/LLM systems.",
       cvHref: "/cv-en.pdf",
       cvLabel: "Download CV",
