@@ -11,12 +11,24 @@ gsap.registerPlugin(ScrollTrigger);
 // Formasyon scroll ilerlemesine bağlı; yatay-pinned Projeler bölümü ortada
 // (dağınık bölge) kaldığı için efekt onunla çakışmaz.
 export default function MetBackground() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const container = containerRef.current;
+    if (!container) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // Her mount KENDİ canvas'ını oluştursun. React StrictMode dev'de bileşen
+    // iki kez mount olur; tek paylaşılan canvas'ta ilk unmount context'i
+    // kaybedince ikinci mount renderer kuramıyor ve canvas beyaza dönüp koyu
+    // body'yi örtüyordu. Taze canvas ile context çakışması imkânsız.
+    const canvas = document.createElement("canvas");
+    canvas.setAttribute("aria-hidden", "true");
+    canvas.className = "pointer-events-none fixed inset-0 z-0";
+    container.appendChild(canvas);
+    // context kaybında tarayıcı geri yükleyebilsin (varsayılan iptali önle)
+    const onCtxLost = (e: Event) => e.preventDefault();
+    canvas.addEventListener("webglcontextlost", onCtxLost);
 
     let renderer: THREE.WebGLRenderer;
     try {
@@ -53,14 +65,24 @@ export default function MetBackground() {
     tx.fillText("MET", TW / 2, TH / 2 + 8);
     const img = tx.getImageData(0, 0, TW, TH).data;
 
+    // MET'i viewport genişliğine sığdır: z=0'da kameranın gördüğü genişlik
+    // en-boy oranıyla değişir; dar (portre) ekranda çarpanı küçültüp MET'in
+    // kenarlardan taşmasını engelle. Masaüstünde 0.6'da kalır (üst sınır).
+    const aspect = window.innerHeight > 0 ? window.innerWidth / window.innerHeight : 1;
+    const visH = 2 * camera.position.z * Math.tan((camera.fov * Math.PI) / 360);
+    const visW = visH * aspect;
+    const fit = (0.82 * visW) / TW; // görünür genişliğin ~%82'sine sığdır
+    // fit sonlu değilse (ör. ölçüm 0 iken) 0.6'ya düş; NaN pozisyonları önle
+    const SCALE = Number.isFinite(fit) ? Math.min(0.6, fit) : 0.6;
+
     const pts: [number, number, number][] = [];
     const step = isMobile ? 5 : 3;
     for (let y = 0; y < TH; y += step) {
       for (let x = 0; x < TW; x += step) {
         if (img[(y * TW + x) * 4 + 3] > 128) {
           pts.push([
-            (x - TW / 2) * 0.6,
-            -(y - TH / 2) * 0.6,
+            (x - TW / 2) * SCALE,
+            -(y - TH / 2) * SCALE,
             (Math.random() - 0.5) * 14,
           ]);
         }
@@ -214,13 +236,13 @@ export default function MetBackground() {
       geo.dispose();
       mat.dispose();
       renderer.dispose();
-      // StrictMode dev double-mount'ta canvas context'ini serbest bırak ki
-      // ikinci mount aynı canvas'ta yeni renderer kurabilsin.
       renderer.forceContextLoss();
+      // Bu mount'a ait canvas'ı DOM'dan kaldır; sonraki mount taze bir canvas
+      // oluşturacağı için forceContextLoss bir daha mount'u bozamaz.
+      canvas.removeEventListener("webglcontextlost", onCtxLost);
+      canvas.remove();
     };
   }, []);
 
-  return (
-    <canvas ref={canvasRef} aria-hidden className="pointer-events-none fixed inset-0 z-0" />
-  );
+  return <div ref={containerRef} aria-hidden />;
 }
