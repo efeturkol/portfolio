@@ -79,6 +79,8 @@ type SiteContent = {
     body: string;
     button: string;
     mailSubject: string;
+    copyHint: string;
+    copied: string;
   };
   ogTagline: string;
 };
@@ -275,6 +277,8 @@ export const content: Record<Lang, SiteContent> = {
       body: "Staj ve yeni başlayan seviyesindeki iş fırsatları hakkında konuşmak ya da sadece merhaba demek için bana e-posta gönderebilirsiniz. En kısa sürede dönüş yaparım.",
       button: "E-posta Gönder",
       mailSubject: "Merhaba — Portfolyo üzerinden ulaşıyorum",
+      copyHint: "Kopyalamak için tıkla",
+      copied: "kopyalandı ✓",
     },
     ogTagline: "Backend geliştirme ve AI/LLM sistemleri üzerine çalışıyorum.",
   },
@@ -470,6 +474,8 @@ export const content: Record<Lang, SiteContent> = {
       body: "Feel free to email me about internships and entry-level opportunities — or just to say hi. I'll get back to you as soon as I can.",
       button: "Send an Email",
       mailSubject: "Hello — Reaching out via your portfolio",
+      copyHint: "Click to copy",
+      copied: "copied ✓",
     },
     ogTagline: "Working on backend development and AI/LLM systems.",
   },

@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Magnetic from "./Magnetic";
@@ -8,9 +8,22 @@ import { content, type Lang } from "@/lib/content";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const EMAIL = "mahmutefeturkol@hotmail.com";
+
 export default function Contact({ lang }: { lang: Lang }) {
   const t = content[lang].contact;
   const rootRef = useRef<HTMLElement>(null);
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+    } catch {
+      // pano erişimi engelliyse sessizce geç
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -89,12 +102,15 @@ export default function Contact({ lang }: { lang: Lang }) {
           </div>
 
           <div className="contact-item mt-14 flex flex-wrap gap-x-10 font-mono text-xs uppercase tracking-[0.2em]">
-            <a
-              href="mailto:mahmutefeturkol@hotmail.com"
-              className="inline-block break-all py-3 lowercase tracking-normal text-neutral-400 transition-colors hover:text-white"
+            <button
+              type="button"
+              onClick={copyEmail}
+              title={t.copyHint}
+              aria-label={t.copyHint}
+              className="inline-block cursor-pointer break-all border-0 bg-transparent p-0 py-3 font-mono lowercase tracking-normal text-neutral-400 transition-colors hover:text-white"
             >
-              mahmutefeturkol@hotmail.com
-            </a>
+              {copied ? t.copied : EMAIL}
+            </button>
             <a
               href="https://github.com/efeturkol"
               target="_blank"
